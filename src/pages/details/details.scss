@@ -1,0 +1,13 @@
+.details {
+    margin-top: 7rem;
+    width: calc(100vw - 9px);
+    height: 100vh;
+
+    .container-detail {
+        margin: 10px 20px 0 20px;
+        .conatiner-breadcrumb {
+            width: 100%;
+            margin: auto;
+        }
+    }
+}

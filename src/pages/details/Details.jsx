@@ -1,4 +1,4 @@
-import { Breadcrumb, Image } from 'antd';
+import { Breadcrumb, Image, Badge, Button } from 'antd';
 import React, { useState } from 'react';
 import './details.scss';
 export const Details = () => {
@@ -44,7 +44,9 @@ export const Details = () => {
                 <div className='container-details-products'>
                     <div className='container-img'>
                         <div className='img-selected'>
-                            <Image src={product[imgSelect]['img']} alt={'Cover_page'} />
+                            <Badge.Ribbon text="Nuevo" color="green">
+                                <Image src={product[imgSelect]['img']} alt={'Cover_page'} />
+                            </Badge.Ribbon>
                         </div>
                         <div className='container-img-not-selected'>
                             {product.map((item, index) => (
@@ -55,8 +57,28 @@ export const Details = () => {
                         </div>
                     </div>
                     <div className='container-description'>
-
-
+                        <h1>Title del producto</h1>
+                        <p className='price-text'>$230.300</p>
+                        <div className='description-product'>
+                            <p>PORTO se inspiro en la ciudad del vino en Portugal, la ciudad de las casitas, de los mil colores y barcos.</p>
+                            <p>- Este pantalón están hecho de forma sostenible con lino y rayon.</p>
+                            <p>- El color se obtiene por sublimación, no utilizamos agua en el proceso.</p>
+                            <p>- El empaque y la etiqueta son hechos de papel reciclado.</p>
+                            <p>- Edición limitada.</p>
+                            <p>- Este pantalón están hecho de forma sostenible con lino y rayon.</p>
+                            <p>- El color se obtiene por sublimación, no utilizamos agua en el proceso.</p>
+                            <p>- El empaque y la etiqueta son hechos de papel reciclado.</p>
+                            <p> El color fue elegido pensando en los edificios que inundan la ciudad, por segunda vez tenemos un pantalón.</p>
+                        </div>
+                        <div className='container-tallas'>
+                            <p>Tallas:</p>
+                            <div className='container-botoom'>
+                                <Button onClick={(e) => window.location.replace('https://wa.me/message/VRYESG22ZYGPB1')} className='buttom' shape="circle" >XS</Button>
+                                <Button className='buttom' shape="circle" >S</Button>
+                                <Button className='buttom' shape="circle" >M</Button>
+                                <Button className='buttom' shape="circle" >L</Button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

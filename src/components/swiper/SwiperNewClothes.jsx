@@ -9,6 +9,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 import { Navigation, EffectFade, Pagination, Autoplay } from "swiper";
+import { Button } from 'antd';
 
 export const SwiperNewClothes = () => {
     let productActual = 'azzul';
@@ -55,9 +56,9 @@ export const SwiperNewClothes = () => {
                                 <div className="container-header">
                                     <img className="container-img-header" src={item['img']} alt="Cover_page" />
                                     <div className="container-text">
-                                        <p className='container-text__1' >¡Hola! soy</p>
-                                        <p className='container-text__2' >Sergio cano </p>
-                                        <p className='container-text__3' >Programador de software</p>
+                                        <p className='container-text__1' >NUEVO PRODUCTO</p>
+                                        <p className='container-text__2' >Azzul </p>
+                                        <Button className='buttom'  type="primary">Disponible ya!</Button>
                                     </div>
                                 </div>
                             </div>

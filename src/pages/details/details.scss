@@ -54,6 +54,45 @@
     }
 
     .container-description {
+        padding: 0 0px 0 25px;
         width: 40%;
+
+        h1 {
+            color: #b57b0d;
+            font-family: Cinzel;
+        }
+
+        .price-text {
+            font-family: Cinzel;
+            font-size: 18px;
+            letter-spacing: 1px;
+            color: #35414e;
+            font-weight: 400;
+        }
+
+        .description-product {
+            p {
+                font-family: Nunito Sans;
+                margin-bottom: 1.3em;
+                color: #35414e;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.container-tallas {
+    p {
+        font-family: Nunito Sans;
+        margin-bottom: 1.3em;
+        color: #35414e;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+    }
+
+    .container-botoom {
+        .buttom {
+            margin-right: 10px;
+        }
     }
 }

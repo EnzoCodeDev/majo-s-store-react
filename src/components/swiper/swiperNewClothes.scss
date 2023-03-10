@@ -61,7 +61,7 @@
     color: #faebd7;
     display: flex;
     flex-direction: column;
-    height: 80%;
+    height: 90%;
     justify-content: center;
     position: relative;
     text-align: start;
@@ -75,14 +75,28 @@
     }
 
     &__1 {
-        font-size: 30px;
+        color: #fdfcfc;
+        letter-spacing: 8px;
+        font-size: 15px;
+        font-weight: 700;
+        font-family: Nunito Sans;
     }
 
     &__2 {
+        color: #fdfcfc;
+        font-family: Cinzel;
         font-size: 60px;
     }
 
-    &__3 {
-        font-size: 30px;
+    .buttom {
+        font-size: 15px;
+        text-align: center;
+        background-color: #b8934e;
+        max-width: 200px;
+        z-index: 10;
+
+        &:hover {
+            background-color: #b67d12;
+        }
     }
 }

@@ -19,6 +19,7 @@ export const AppRouter = () => {
           <Routes>
             <Route path="home" exact element={<Home />} />
             <Route path="detail" exact element={<Details />} />
+            **<Route path="*" element={<Home />}></Route>**
           </Routes>
         </div>
       </div>

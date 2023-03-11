@@ -10,30 +10,12 @@ import "swiper/css/pagination";
 
 import { Navigation, EffectFade, Pagination, Autoplay } from "swiper";
 import { Button } from 'antd';
+import { dataProducts } from '../../data/dataProducts';
+import { useNavigate } from 'react-router-dom';
 
 export const SwiperNewClothes = () => {
-    let productActual = 'azzul';
-    let product = [{
-        title: 'Hola mundo',
-        description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
-        img: `/products/${productActual}/swiper/${productActual}_1.jpg`,
-        url: 'https://github.com/sergioDavidCano',
-    }, {
-        title: 'Hola mundo',
-        description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
-        img: `/products/${productActual}/swiper/${productActual}_2.jpg`,
-        url: 'https://github.com/sergioDavidCano',
-    }, {
-        title: 'Hola mundo',
-        description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
-        img: `/products/${productActual}/swiper/${productActual}_3.jpg`,
-        url: 'https://github.com/sergioDavidCano',
-    }, {
-        title: 'Hola mundo',
-        description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
-        img: `/products/${productActual}/swiper/${productActual}_4.jpg`,
-        url: 'https://github.com/sergioDavidCano',
-    }];
+    let navigate = useNavigate();
+    let productActual = dataProducts['azzul']['swiper'];
     return (
         <section id="proyect" className="seccion-proyect">
             <div className='container-swiper'>
@@ -50,15 +32,15 @@ export const SwiperNewClothes = () => {
                     modules={[Autoplay, Navigation, EffectFade, Pagination]}
                     className="mySwiper"
                 >
-                    {product.map((item, index) => (
-                        <SwiperSlide>
+                    {productActual['img'].map((item, index) => (
+                        <SwiperSlide key={index}>
                             <div className="container">
                                 <div className="container-header">
-                                    <img className="container-img-header" src={item['img']} alt="Cover_page" />
+                                    <img className="container-img-header" src={item} alt="Cover_page" />
                                     <div className="container-text">
                                         <p className='container-text__1' >NUEVO PRODUCTO</p>
-                                        <p className='container-text__2' >Azzul </p>
-                                        <Button className='buttom'  type="primary">Disponible ya!</Button>
+                                        <p className='container-text__2' >{productActual['title']} </p>
+                                        <Button onClick={() => navigate(`/detail/${productActual['redirect']}`)} className='buttom' value="large" type="primary">Disponible ya!</Button>
                                     </div>
                                 </div>
                             </div>

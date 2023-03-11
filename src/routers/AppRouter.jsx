@@ -18,7 +18,7 @@ export const AppRouter = () => {
         <div className="container-root-body">
           <Routes>
             <Route path="home" exact element={<Home />} />
-            <Route path="detail" exact element={<Details />} />
+            <Route path="detail/:product" exact element={<Details />} />
             **<Route path="*" element={<Home />}></Route>**
           </Routes>
         </div>

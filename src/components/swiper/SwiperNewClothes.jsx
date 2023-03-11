@@ -40,7 +40,7 @@ export const SwiperNewClothes = () => {
                                     <div className="container-text">
                                         <p className='container-text__1' >NUEVO PRODUCTO</p>
                                         <p className='container-text__2' >{productActual['title']} </p>
-                                        <Button onClick={() => navigate(`/detail/${productActual['redirect']}`)} className='buttom' value="large" type="primary">Disponible ya!</Button>
+                                        <Button onClick={() => navigate(`/detail/${productActual['redirect']}`)} className='buttom' size="large" type="primary">Disponible ya!</Button>
                                     </div>
                                 </div>
                             </div>

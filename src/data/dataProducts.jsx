@@ -4,6 +4,7 @@ import azul2 from '../assets/products/azzul/swiper/azzul_2.jpg';
 import azul3 from '../assets/products/azzul/swiper/azzul_3.jpg';
 import azul4 from '../assets/products/azzul/swiper/azzul_4.jpg';
 export let dataProducts = {
+    ultime: 'azzul',
     alfa: {
         swiper: {
             title: 'Alfa',

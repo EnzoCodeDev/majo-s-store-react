@@ -1,22 +1,21 @@
 @import "../../styles/base/mixinResponse";
 
 .container-main-opacity {
-    --bg-opacity: 1;
-    background-color: rgb(19 20 25 / var(--bg-opacity));
-    height: 5rem;
+    height: 6rem;
 }
 
 .container-main-not-opacity {
-    --bg-opacity: 1;
-    background-color: rgb(43, 43, 43);
-    height: 6rem
+    height: 7rem
 }
 
 .container-main {
     --text-opacity: 1;
     align-items: center;
-    color: rgb(255 255 255 / var(--text-opacity));
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    color: #333;
     display: flex;
+    flex-direction: column;
     position: fixed;
     width: 100%;
     transition-property: all;
@@ -24,129 +23,80 @@
     transition-duration: 300ms;
     top: 0;
     z-index: 10;
+}
 
-    .container-sub-main {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
+.container-sub-main {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .container-start {
+        width: 33%;
+    }
+
+    .container-enter {
         height: 100%;
-        width: 93%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 33%;
 
-        .wp-block-image {
+        .logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
 
-            .figure-img {
-                margin-left: auto;
-                margin-right: auto;
-                display: table;
-
-                img {
-                    width: 210px;
-                    height: 60px;
-                    max-width: 100%;
-                }
-            }
-
-        }
-
-        .icon-container {
             &:hover {
                 cursor: pointer;
             }
+        }
+    }
 
-            .container-sub-icon {
-                display: flex;
-            }
+    .container-end {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        width: 33%;
+        margin-right: 25px;
 
-            .night-light-label {
-                display: block;
-                margin: 20px 0;
-                height: 31px;
-                width: 60px;
-                border: 2px solid #4672fe;
-                border-radius: 30px;
-                position: relative;
-                cursor: pointer;
+        .icon-social {
+            margin-right: 18px;
+            font-size: 30px;
+            color: black;
+            transition: all 0.3s ease;
 
-                #night-light-checkbox {
-                    position: absolute;
-                    visibility: hidden;
-
-                    &:checked+.night-light-ball {
-                        transform: translateX(28px);
-                    }
-                }
-
-                .night-light-ball {
-                    position: absolute;
-                    width: 25px;
-                    height: 25px;
-                    top: 1px;
-                    left: 1px;
-                    border-radius: 50%;
-                    background: #4672fe;
-                    z-index: 99;
-                    transition: 300ms;
-                }
-            }
-
-            .icon-mode {
-                font-size: 30px;
-                color: rgb(255, 255, 255);
-
-                &.active-mode {
-                    display: block;
-                }
+            &:hover {
+                font-size: 35px;
+                color: #b67d12;
+                transition: all 0.3s ease;
             }
         }
+    }
+}
 
-        @include desktop {
-            .nav-desktop {
-                display: block;
-            }
+.container-option {
+    width: 100%;
 
-            .social {
-                display: block;
-            }
+    .listMenu {
+        margin: auto;
 
-            .nav-mobile {
-                display: none;
-            }
-        }
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            list-style: none;
 
-        @include tablet {
-            .nav-desktop {
-                display: none;
-            }
-            .wp-block-image {
-                margin: auto;        
-            }
+            li {
+                font-family: Cinzel;
+                font-size: 17px;
+                padding: 0px 25px;
+                transition: all 0.5s ease;
 
-            .social {
-                display: none;
-            }
-
-            .nav-mobile {
-                display: block;
-            }
-
-        }
-
-        @include mobile {
-            .nav-desktop {
-                display: none;
-            }
-            .wp-block-image {
-                margin: auto;        
-            }
-
-            .social {
-                display: none;
-            }
-
-            .nav-mobile {
-                display: block;
+                &:hover {
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+                    font-size: 18px;
+                    color: #b67d12;
+                }
             }
         }
     }

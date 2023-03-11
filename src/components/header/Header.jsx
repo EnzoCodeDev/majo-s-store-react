@@ -1,65 +1,88 @@
-import React, { useState, useEffect } from "react";
-// import { WiDaySunny, WiMoonAltWaningCrescent4 } from "react-icons/wi";
-// import logo from "../../assets/img/logo/logo-higueron.png";
-// import { NavBarMobile } from "../navbar-mobile/NavBarMobile";
-// import { Navbar } from "../navbar/Navbar";
-// import Socials from "../Socials";
 import "./header.scss";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { MdWhatsapp, MdFacebook } from "react-icons/md";
+import { TbBrandTiktok, TbBrandInstagram } from "react-icons/tb";
+import { dataProducts } from "../../data/dataProducts";
+import logo from '../../assets/majos/logo.png'
 
 export const Header = () => {
+  let ultime = dataProducts['ultime'];
+  let navigate = useNavigate();
   const [bg, setBg] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+
+  let itemMenu = [{
+    name: 'INICIO',
+    redirect: '/home',
+  }, {
+    name: 'NUEVO',
+    redirect: `/detail/${ultime}`,
+  }, {
+    name: 'COLECCIÓN',
+    redirect: '/home',
+  }, {
+    name: `MAJO'S`,
+    redirect: '/home',
+  }];
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       return window.scrollY > 50 ? setBg(true) : setBg(false);
     });
   });
-  const handleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+
+  let socials = [{
+    icon: <MdWhatsapp className="icon-social" />,
+    redirect: 'https://wa.me/message/VRYESG22ZYGPB1',
+  }, {
+    icon: <MdFacebook className="icon-social" />,
+    redirect: 'https://www.facebook.com/profile.php?id=100088500618624',
+  }, {
+    icon: <TbBrandInstagram className="icon-social" />,
+    redirect: 'https://www.instagram.com/majos_official/?fbclid=IwAR38fNRd5aYYSYy2HccUB6Av-Cwg32s-QBoYyf46eVviEOdzqAYvfB5ImBo',
+  },
+  {
+    icon: <TbBrandTiktok className="icon-social" />,
+    redirect: 'https://www.tiktok.com/@majos_official?fbclid=IwAR2EJBkEh0-VlbP1opS7UZRzZaQeR-0ZDyHXkmMmVQbe8L8F4f_-URDTlwc',
+  }];
+
   return (
     <header
-      className={`${
-        bg ? "container-main-opacity " : "container-main-not-opacity "
-      } container-main`}
+      className={`${bg ? "container-main-opacity " : "container-main-not-opacity "
+        } container-main`}
     >
       <div className="container-sub-main">
-        <div className="icon-container">
-          <label htmlFor="night-light-checkbox" className="night-light-label">
-            <input
-              onClick={(e) => handleDarkMode(e)}
-              type="checkbox"
-              id="night-light-checkbox"
-            />
-            <span className="night-light-ball"></span>
-            <div className="container-sub-icon">
-              {/* <WiMoonAltWaningCrescent4
-                className={`icon-mode ${darkMode ? " active-mode" : " "} `}
-              />
-              <WiDaySunny
-                className={`icon-mode ${darkMode ? " active-mode" : " "}`}
-              /> */}
+        <div className="container-start">
+
+        </div>
+        <div className="container-enter">
+          <img onClick={() => navigate('/home')} className="logo" src={logo} alt="Logo" />
+        </div>
+        <div className="container-end">
+          {socials.map((item, index) => (
+            <div key={index}>
+              <Link to={item['redirect']} target="_blank"
+                onClick={(event) => {
+                  event.preventDefault();
+                  window.open(item['redirect'])
+                }}
+              >
+                {item['icon']}
+              </Link>
             </div>
-          </label>
+          ))}
         </div>
-        {/* logo */}
-        <div className="wp-block-image">
-          <figure className="figure-img">
-            {/* <img src={logo} alt=''/> */}
-          </figure>
-        </div>
-        {/* nav */}
-        <div className="nav-desktop">
-          {/* <Navbar /> */}
-        </div>
-        {/* Socials */}
-        <div className="social">
-          {/* <Socials /> */}
-        </div>
-        {/* nav mobile*/}
-        <div className="nav-mobile">
-          {/* <NavBarMobile /> */}
-        </div>
+      </div>
+      <div className="container-option">
+        <nav className='listMenu'>
+          <ul>
+            {itemMenu.map((item, index) => (
+              <li key={index} onClick={() => navigate(item['redirect'])}>
+                {item['name']}
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </header>
   );

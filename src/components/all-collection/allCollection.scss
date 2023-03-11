@@ -1,0 +1,17 @@
+.container-all-component {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .container-card {
+        width: 22%;
+        margin-top: 10px;
+        .container-body{
+            font-size: 19px;
+            color: #b67d12;
+            text-align: center;
+            display: flex;
+        }
+    }
+}

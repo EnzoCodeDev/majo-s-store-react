@@ -19,7 +19,7 @@ export const Header = () => {
     redirect: `/detail/${ultime}`,
   }, {
     name: 'COLECCIÓN',
-    redirect: '/home',
+    redirect: '/all-collection',
   }, {
     name: `MAJO'S`,
     redirect: '/home',

@@ -16,7 +16,7 @@ export const Details = () => {
     });
     useEffect(() => {
         if (product && dataProducts[product]) {
-            setProductData(dataProducts['azzul']['detail']);
+            setProductData(dataProducts[product]['detail']);
         } else {
             setProductData(undefined);
         }

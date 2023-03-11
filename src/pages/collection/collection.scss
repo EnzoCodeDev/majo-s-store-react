@@ -1,0 +1,18 @@
+.all-collection {
+    margin-top: 7rem;
+    width: calc(100vw - 9px);
+
+    .container-collection {
+        margin: 10px 20px 0 20px;
+
+        .conatiner-breadcrumb {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+    }
+}
+.container-all-collection-details{
+    margin: 10px 60px;
+}

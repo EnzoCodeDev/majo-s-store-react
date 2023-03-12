@@ -60,16 +60,14 @@ export const Header = () => {
         </div>
         <div className="container-end">
           {socials.map((item, index) => (
-            <div key={index}>
-              <Link to={item['redirect']} target="_blank"
-                onClick={(event) => {
-                  event.preventDefault();
-                  window.open(item['redirect'])
-                }}
-              >
-                {item['icon']}
-              </Link>
-            </div>
+            <Link key={index} to={item['redirect']} target="_blank"
+              onClick={(event) => {
+                event.preventDefault();
+                window.open(item['redirect'])
+              }}
+            >
+              {item['icon']}
+            </Link>
           ))}
         </div>
       </div>

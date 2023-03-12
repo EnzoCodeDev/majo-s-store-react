@@ -20,6 +20,24 @@ export let dataProducts = {
             img: zusu,
             redirect: 'alfa',
         },
+        {
+            title: 'ALFA',
+            price: '230.000',
+            img: zusu,
+            redirect: 'azzul',
+        },
+        {
+            title: 'AZZUL',
+            price: '230.000',
+            img: zusu,
+            redirect: 'alfa',
+        },
+        {
+            title: 'ALFA',
+            price: '230.000',
+            img: zusu,
+            redirect: 'azzul',
+        },
     ],
     alfa: {
         swiper: {

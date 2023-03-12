@@ -1,12 +1,36 @@
+@import '../../styles/base/mixinResponse';
 .container-main-footer {
     background-color: #f5f3ef;
-    padding: 40px 100px 40px 0px;
+    @include desktop {
+        padding: 40px 100px 70px 0px;
+    }
+
+    @include tablet {
+        padding: 40px 80px 70px 0px;
+    }
+
+    @include mobile {
+        padding: 40px 0px 70px 0px;
+    }
+
     width: 100%;
 
     .container-footer {
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
+        @include desktop {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        @include tablet {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        @include mobile {
+            display: block;
+            text-align: center;
+        }
 
         .cotainer-setion-footer {
             span {
@@ -33,6 +57,39 @@
     }
 
     .container-footer-footer {
-        
+        @include desktop {
+            width: calc(100% + 100px);
+        }
+
+        @include tablet {
+            width: calc(100% + 80px);
+        }
+
+        @include mobile {
+            width: calc(100%);
+        }
+        height: 30px;
+        text-align: center;
+
+        .parrafo {
+            color: #35414e;
+            list-style: none;
+            margin-bottom: 1.3em;
+            line-height: 24px;
+            font-family: Nunito Sans;
+            font-size: 15px;
+        }
+
+        .icon-social {
+            margin-right: 18px;
+            font-size: 30px;
+            color: black;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: #b67d12;
+                transition: all 0.3s ease;
+            }
+        }
     }
 }

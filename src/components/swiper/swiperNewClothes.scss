@@ -1,3 +1,5 @@
+@import "../../styles/base/mixinResponse";
+
 .seccion-proyect {
     border-bottom: 1px solid #605c4e80;
     height: auto;
@@ -46,10 +48,21 @@
 .container {
     background-color: #8c8c8c;
     margin: auto;
-    height: 528px;
+
+    @include desktop {
+        height: 528px;
+    }
+
+    @include tablet {
+        height: 428px;
+    }
+
+    @include mobile {
+        height: 328px;
+    }
 
     .container-header {
-        height: 528px;
+        height: 100%;
         position: relative;
         z-index: 0;
     }
@@ -66,6 +79,19 @@
     text-align: start;
     margin-left: 10%;
 
+    @include desktop {
+        height: 90%;
+    }
+
+    @include tablet {
+        height: 90%;
+    }
+
+    @include mobile {
+        height: 100%;
+        margin-left: 12%;
+    }
+
     p {
         background-color: transparent;
         margin-top: 0;
@@ -75,24 +101,61 @@
 
     &__1 {
         color: #fdfcfc;
-        letter-spacing: 8px;
-        font-size: 15px;
         font-weight: 700;
         font-family: Nunito Sans;
+
+        @include desktop {
+            font-size: 15px;
+            letter-spacing: 8px;
+        }
+
+        @include tablet {
+            font-size: 15px;
+            letter-spacing: 7px;
+        }
+
+        @include mobile {
+            font-size: 12px;
+            letter-spacing: 4px;
+        }
     }
 
     &__2 {
         color: #fdfcfc;
         font-family: Cinzel;
-        font-size: 60px;
+
+        @include desktop {
+            font-size: 60px;
+        }
+
+        @include tablet {
+            font-size: 55px;
+        }
+
+        @include mobile {
+            font-size: 40px;
+        }
     }
 
     .buttom {
-        font-size: 15px;
         text-align: center;
         background-color: #b8934e;
-        max-width: 200px;
         z-index: 10;
+
+        @include desktop {
+            font-size: 15px;
+            max-width: 200px;
+        }
+
+        @include tablet {
+            font-size: 15px;
+            max-width: 200px;
+        }
+
+        @include mobile {
+            font-size: 13px;
+            max-width: 140px;
+        }
 
         &:hover {
             background-color: #b67d12;

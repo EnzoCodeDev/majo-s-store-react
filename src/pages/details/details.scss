@@ -1,9 +1,19 @@
+@import "../../styles/base/mixinResponse";
+
 .details {
     margin-top: 7rem;
     width: calc(100vw - 9px);
 
+    @include mobile {
+        width: 100vw;
+    }
+
     .container-detail {
         margin: 10px 20px 0 20px;
+
+        @include mobile {
+            margin: 10px 10px 30px 10px;
+        }
 
         .conatiner-breadcrumb {
             width: 100%;
@@ -15,14 +25,51 @@
 }
 
 .container-details-products {
-    display: flex;
-    margin: 25px 30px 0 30px;
+
+    @include desktop {
+        display: flex;
+        margin: 25px 30px 30px 30px;
+    }
+
+    @include tablet {
+        display: flex;
+        margin: 20px 20px 50px 20px;
+    }
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 10px 10px 10px;
+    }
 
     .container-img {
         width: 60%;
 
+        @include mobile {
+            width: 100%;
+        }
+
         .img-selected {
             width: 100%;
+
+            @include mobile {
+                display: none;
+            }
+
+            &.responsive {
+                @include desktop {
+                    display: none;
+                }
+
+                @include tablet {
+                    padding-top: 10px;
+                    display: block;
+                }
+
+                @include mobile {
+                    display: none;
+                }
+            }
 
             img {
                 display: block;
@@ -38,9 +85,20 @@
             width: 100%;
             padding: 15px 0 20px 0;
 
+            @include mobile {
+                display: none;
+            }
+
             .img-not-selected {
-                width: 24%;
-                height: 200px;
+                @include desktop {
+                    width: 24%;
+                    height: 100px;
+                }
+
+                @include tablet {
+                    width: 24%;
+                    height: 100px;
+                }
 
                 img {
                     display: block;
@@ -49,7 +107,6 @@
                     object-fit: cover;
                 }
             }
-
         }
     }
 
@@ -57,9 +114,19 @@
         padding: 0 0px 0 25px;
         width: 40%;
 
+        @include mobile {
+            padding: 0px;
+            width: 100%;
+        }
+
         h1 {
             color: #b57b0d;
             font-family: Cinzel;
+
+            @include mobile {
+                margin-top: 15px;
+                text-align: center;
+            }
         }
 
         .price-text {
@@ -68,6 +135,10 @@
             letter-spacing: 1px;
             color: #35414e;
             font-weight: 400;
+
+            @include mobile {
+                text-align: center;
+            }
         }
 
         .description-product {
@@ -88,9 +159,18 @@
         color: #35414e;
         font-weight: 600;
         margin-bottom: 0.5em;
+
+        @include mobile {
+            text-align: center;
+        }
     }
 
     .container-botoom {
+        @include mobile {
+            width: 100%;
+            text-align: center;
+        }
+
         .buttom {
             margin-right: 10px;
 
@@ -105,14 +185,29 @@
 .container-bottom-info {
     margin-top: 10px;
 
+    @include mobile {
+        text-align: center;
+    }
+
     .whatsapp {
         font-size: 15px;
         text-align: center;
         background-color: #b8934e;
         max-width: 200px;
         z-index: 10;
+
         &:hover {
             background-color: #b67d12;
         }
+    }
+}
+
+.container-img-movil {
+    @include desktop {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
     }
 }

@@ -29,7 +29,7 @@ export const AllCollection = () => {
                             <Card
                                 hoverable
                                 style={{ width: '100%' }}
-                                cover={<img alt="example" style={{ maxHeight: '400px', objectFit: 'cover' }} src={item['img']} />}
+                                cover={<img alt="example" className='img' style={{ maxHeight: '400px', objectFit: 'cover' }} src={item['img']} />}
                             >
                                 <Meta className='container-body' title={item['title']} description={`$${item['price']}`} />
                             </Card>

@@ -2,6 +2,13 @@ import './details.scss';
 import React, { useState, useEffect } from 'react';
 import { Breadcrumb, Image, Badge, Button, Result } from 'antd';
 import { WhatsAppOutlined } from "@ant-design/icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
+import { Navigation, EffectFade, Pagination, Autoplay } from "swiper";
+
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { AnimationPage } from '../../components/animation/AnimationPage';
 import { dataProducts } from '../../data/dataProducts';
@@ -9,6 +16,7 @@ export const Details = () => {
     let navigate = useNavigate();
     let { product } = useParams();
     const [imgSelect, setImgSelect] = useState(0);
+    const [imgSelect2, setImgSelect2] = useState(1);
     const [productData, setProductData] = useState({
         img: [],
         tallas: [],
@@ -52,12 +60,63 @@ export const Details = () => {
                                         )}
                                     </Badge.Ribbon>
                                 </div>
+                                <div className='img-selected responsive'>
+                                    <Badge.Ribbon
+                                        style={{
+                                            visibility: dataProducts['ultime'] === product ? 'visible' : (dataProducts['unavailable'].includes(product) ? 'visible' : 'hidden')
+                                        }}
+                                        text={dataProducts['unavailable'].includes(product) ? "Agotado" : 'Nuevo'}
+                                        color={dataProducts['unavailable'].includes(product) ? "#a39a8e" : 'green'}>
+                                        {productData['img'][imgSelect2] && (
+                                            <Image src={productData['img'][imgSelect2]} alt={'Cover_page'} />
+                                        )}
+                                    </Badge.Ribbon>
+                                </div>
                                 <div className='container-img-not-selected'>
                                     {productData['img'].map((item, index) => (
                                         <div key={index} className='img-not-selected'>
-                                            <Image onClick={(e) => setImgSelect(index)} src={item} alt={'Cover_page'} />
+                                            <Image onClick={(e) => {
+                                                if (imgSelect === index) {
+                                                    setImgSelect(index);
+                                                    return;
+                                                }
+                                                if (imgSelect2 === index) {
+                                                    setImgSelect(imgSelect2);
+                                                    setImgSelect2(imgSelect);
+                                                    return;
+                                                }
+                                                setImgSelect(index);
+                                                setImgSelect2(imgSelect);
+                                            }} src={item} alt={'Cover_page'} />
                                         </div>
                                     ))}
+                                </div>
+                                <div className='container-img-movil'>
+                                    <div className='container-swiper'>
+                                        <Swiper
+                                            rewind={true}
+                                            navigation={true}
+                                            pagination={{
+                                                clickable: true,
+                                            }}
+                                            autoplay={{
+                                                delay: 4000,
+                                                disableOnInteraction: false,
+                                            }}
+                                            modules={[Autoplay, Navigation, EffectFade, Pagination]}
+                                            className="mySwiper"
+                                        >
+                                            {productData['img'].map((item, index) => (
+                                                <SwiperSlide key={index}>
+                                                    <div className="container">
+                                                        <div className="container-header">
+                                                            <img className="container-img-header" src={item} alt="Cover_page" />
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                            ))}
+                                        </Swiper>
+                                    </div>
                                 </div>
                             </div>
                             <div className='container-description'>

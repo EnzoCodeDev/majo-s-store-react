@@ -1,9 +1,32 @@
+@import '../../styles/base/mixinResponse';
+
 .all-collection {
     margin-top: 7rem;
-    width: calc(100vw - 9px);
+
+    @include desktop {
+        width: calc(100vw - 9px);
+    }
+
+    @include tablet {
+        width: calc(100vw - 9px);
+    }
+
+    @include mobile {
+        width: 100vw;
+    }
 
     .container-collection {
-        margin: 10px 20px 0 20px;
+        @include desktop {
+            margin: 10px 20px 0 20px;
+        }
+
+        @include tablet {
+            margin: 10px 20px 0 20px;
+        }
+
+        @include mobile {
+            margin: 5px 5px 0 5px;
+        }
 
         .conatiner-breadcrumb {
             width: 100%;
@@ -13,6 +36,17 @@
         }
     }
 }
-.container-all-collection-details{
-    margin: 10px 60px;
+
+.container-all-collection-details {
+    @include desktop {
+        margin: 10px 60px;
+    }
+
+    @include tablet {
+        margin: 30px 30px;
+    }
+
+    @include mobile {
+        margin: 10px 10px;
+    }
 }

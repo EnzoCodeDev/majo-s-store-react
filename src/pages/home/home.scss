@@ -1,12 +1,38 @@
+@import '../../styles/base/mixinResponse';
+
 .container-home {
     .container-presentation {
         background-color: #f5f3ef;
-        padding-top: 80px;
         width: 100%;
-        height: 620px;
+
+        @include desktop {
+            min-height: 620px;
+            padding-top: 80px;
+        }
+
+        @include tablet {
+            min-height: 620px;
+            padding-top: 70px;
+        }
+
+        @include mobile {
+            min-height: 650px;
+            padding-top: 50px;
+        }
 
         .presentation {
-            width: 50%;
+            @include desktop {
+                width: 50%;
+            }
+
+            @include tablet {
+                width: 80%;
+            }
+
+            @include mobile {
+                width: 90%;
+            }
+
             margin: auto;
             height: 100px;
 

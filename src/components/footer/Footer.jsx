@@ -1,15 +1,9 @@
 import React from "react";
 import moment from "moment";
-// import { social } from "../../data";
-// import logo from "../../assets/img/logo/logo-higueron.png";
 import { MdWhatsapp, MdFacebook } from "react-icons/md";
 import { TbBrandTiktok, TbBrandInstagram } from "react-icons/tb";
 import "./footer.scss";
-// import { useTranslation } from "react-i18next";
-{/* <p className="parrafo">
-&copy; {`${moment().format("YYYY")} `}Sergio Cano.{" "}
-{t("footer.all-reserved")}
-</p> */}
+import { Link } from "react-router-dom";
 let footerInfo = [{
   title: 'INFORMACIÓN',
   content: [{
@@ -82,7 +76,20 @@ export const Footer = () => {
         ))}
       </div>
       <div className="container-footer-footer">
-
+        <p className="parrafo">
+          &copy; {`${moment().format("YYYY")} `}Sergio Cano.{" "}
+          Todos los derechos reservados
+        </p>
+        {socials.map((item, index) => (
+          <Link key={index} to={item['redirect']} target="_blank"
+            onClick={(event) => {
+              event.preventDefault();
+              window.open(item['redirect'])
+            }}
+          >
+            {item['icon']}
+          </Link>
+        ))}
       </div>
     </footer>
   );

@@ -1,75 +1,38 @@
-@import "../../styles/base/mixinResponse";
-
 .container-main-footer {
-    --bg-opacity: 1;
-    background-color: rgb(19 20 25 / var(--bg-opacity));
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    background-color: #f5f3ef;
+    padding: 40px 100px 40px 0px;
+    width: 100%;
 
-    .container-sub-main-footer {
-        margin-left: auto;
-        margin-right: auto;
+    .container-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
 
-        .container-social {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-
-            @include desktop {
-                --space-y-reverse: 0;
-                flex-direction: row;
-                margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
-                margin-bottom: calc(0px * var(--space-y-reverse));
+        .cotainer-setion-footer {
+            span {
+                font-family: Cinzel;
+                text-transform: uppercase;
+                color: #867140;
+                font-size: 17px;
             }
-            .wp-block-image {
 
-                .figure-img {
-                    margin-bottom: 20px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    display: table;
-    
-                    img {
-                        width: 210px;
-                        height: 60px;
-                        max-width: 100%;
-                    }
+            .container-list {
+                margin-top: 10px;
+
+                li {
+                    color: #35414e;
+                    list-style: none;
+                    margin-bottom: 1.3em;
+                    line-height: 24px;
+                    font-family: Nunito Sans;
+                    font-size: 15px;
                 }
-    
             }
-        }
 
-        .container-sub-social {
-            display: flex;
-
-            .social-redirect {
-                --text-opacity: 1;
-                color: rgb(172 107 52 / var(--text-opacity));
-                font-size: 1rem;
-                line-height: 1.5rem;
-            }
-        }
-
-        .container-sub-social> :not([hidden])~ :not([hidden]) {
-            --tw-space-x-reverse: 0;
-            align-items: center;
-            justify-content: center;
-            margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-            margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
         }
     }
 
-    .parrafo {
-        --text-opacity: 1;
-        color: rgb(135 142 153 / var(--text-opacity));
-        font-size: 15px;
-        opacity: 0.8;
-    }
-
-    .container-social> :not([hidden])~ :not([hidden]) {
-        --space-y-reverse: 0;
-        margin-top: calc(1.5rem * calc(1 - var(--space-y-reverse)));
-        margin-bottom: calc(1.5rem * var(--space-y-reverse));
+    .container-footer-footer {
+        
     }
 }

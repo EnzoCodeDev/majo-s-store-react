@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom';
 
 export const SwiperNewClothes = () => {
     let navigate = useNavigate();
-    let productActual = dataProducts['azzul']['swiper'];
+    let productActual = dataProducts[dataProducts['ultime']]['swiper'];
     return (
         <section id="proyect" className="seccion-proyect">
             <div className='container-swiper'>

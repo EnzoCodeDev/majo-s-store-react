@@ -1,0 +1,68 @@
+.container-home {
+    .container-presentation {
+        background-color: #f5f3ef;
+        padding-top: 80px;
+        width: 100%;
+        height: 620px;
+
+        .presentation {
+            width: 50%;
+            margin: auto;
+            height: 100px;
+
+            .container-img {
+                margin: auto;
+                height: 300px;
+                max-width: 280px;
+
+                img {
+                    border-radius: 50%;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+            .container-description {
+                margin-top: -70px;
+                text-align: center;
+                padding: 10px 40px;
+                background-color: #ffffff;
+                position: relative;
+                z-index: 10;
+
+                h2 {
+                    font-size: 28.5px;
+                    font-family: Cinzel;
+                    font-weight: 100;
+                    margin: 10px 0px;
+                }
+
+                p {
+                    font-family: Nunito Sans;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    color: #35414e;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .all-collection {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px 10px;
+        padding-bottom: 30px;
+
+        h1 {
+            padding-bottom: 10px;
+            font-size: 28.5px;
+            font-family: Cinzel;
+            font-weight: 100;
+            margin: 10px 0px;
+        }
+    }
+}

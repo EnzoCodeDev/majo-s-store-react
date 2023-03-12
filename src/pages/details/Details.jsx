@@ -41,7 +41,12 @@ export const Details = () => {
                         <div className='container-details-products'>
                             <div className='container-img'>
                                 <div className='img-selected'>
-                                    <Badge.Ribbon text="Nuevo" color="green">
+                                    <Badge.Ribbon
+                                        style={{
+                                            visibility: dataProducts['ultime'] === product ? 'visible' : (dataProducts['unavailable'].includes(product) ? 'visible' : 'hidden')
+                                        }}
+                                        text={dataProducts['unavailable'].includes(product) ? "Agotado" : 'Nuevo'}
+                                        color={dataProducts['unavailable'].includes(product) ? "#a39a8e" : 'green'}>
                                         {productData['img'][imgSelect] && (
                                             <Image src={productData['img'][imgSelect]} alt={'Cover_page'} />
                                         )}

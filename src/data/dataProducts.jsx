@@ -6,24 +6,19 @@ import azul4 from '../assets/products/azzul/swiper/azzul_4.jpg';
 import zusu from '../assets/products/azzul/swiper/zusu.jpg';
 export let dataProducts = {
     ultime: 'azzul',
+    unavailable: ['alfa'],
     allCollection: [
         {
             title: 'ALFA',
             price: '230.000',
             img: zusu,
-            redirect: 'alfa'
-        },
-        {
-            title: 'AZZUL',
-            price: '230.000',
-            img: zusu,
             redirect: 'azzul',
         },
         {
             title: 'AZZUL',
             price: '230.000',
             img: zusu,
-            redirect: 'azzul',
+            redirect: 'alfa',
         },
     ],
     alfa: {

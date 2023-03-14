@@ -1,15 +1,17 @@
 import "./header.scss";
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { MdWhatsapp, MdFacebook } from "react-icons/md";
 import { TbBrandTiktok, TbBrandInstagram } from "react-icons/tb";
 import { dataProducts } from "../../data/dataProducts";
 import logo from '../../assets/majos/logo.png'
 
 export const Header = () => {
+  let location = useLocation();
   let ultime = dataProducts['ultime'];
   let navigate = useNavigate();
   const [bg, setBg] = useState(false);
+  const [locationState, setLocationState] = useState('');
 
   let itemMenu = [{
     name: 'INICIO',
@@ -30,6 +32,9 @@ export const Header = () => {
       return window.scrollY > 50 ? setBg(true) : setBg(false);
     });
   });
+  useEffect(() => {
+    setLocationState(location['pathname']);
+  }, [location]);
 
   let socials = [{
     icon: <MdWhatsapp className="icon-social" />,
@@ -75,9 +80,17 @@ export const Header = () => {
         <nav className='listMenu'>
           <ul>
             {itemMenu.map((item, index) => (
-              <li key={index} onClick={() => navigate(item['redirect'])}>
-                {item['name']}
-              </li>
+              <React.Fragment key={index}>
+                {locationState.search(item['redirect']) !== -1 ? (
+                  <li className="not-selected">
+                    {item['name']}
+                  </li>
+                ) : (
+                  <li className="selected" onClick={() => navigate(item['redirect'])}>
+                    {item['name']}
+                  </li>
+                )}
+              </React.Fragment>
             ))}
           </ul>
         </nav>

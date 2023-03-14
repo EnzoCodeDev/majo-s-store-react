@@ -12,8 +12,8 @@ export const AllCollection = () => {
     return (
         <div className='container-all-component'>
             {dataAllCollection.map((item, index) => (
-                <div className='container-card' onClick={() => navigate(`/detail/${item['redirect']}`)}>
-                    <Badge.Ribbon key={index}
+                <div key={index} className='container-card' onClick={() => navigate(`/detail/${item['redirect']}`)}>
+                    <Badge.Ribbon
                         style={{
                             visibility: dataProducts['ultime'] === item['redirect'] ? 'visible' : (dataProducts['unavailable'].includes(item['redirect']) ? 'visible' : 'hidden')
                         }}

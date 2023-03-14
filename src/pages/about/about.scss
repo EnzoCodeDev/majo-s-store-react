@@ -103,6 +103,7 @@
                         font-family: Nunito Sans;
                         font-weight: 400;
                         color: #222222;
+
                         @include desktop {
                             font-size: 17px;
                         }
@@ -113,6 +114,7 @@
                         font-family: Nunito Sans;
                         font-weight: 700;
                         color: #222222;
+
                         @include desktop {
                             font-size: 17px;
                         }

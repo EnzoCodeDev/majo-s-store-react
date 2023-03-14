@@ -160,7 +160,7 @@ export const Details = () => {
                     status="404"
                     title="404"
                     subTitle="Lo sentimos, al parecer el producto no existe."
-                    extra={<Button onClick={() => navigate(`/home`)} type="primary">Volver al inicio</Button>}
+                    extra={<Button onClick={() => navigate(`/`)} type="primary">Volver al inicio</Button>}
                 />
             )}
         </AnimationPage>

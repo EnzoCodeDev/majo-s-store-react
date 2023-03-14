@@ -22,7 +22,7 @@ export const Header = () => {
     redirect: '/all-collection',
   }, {
     name: `MAJO'S`,
-    redirect: '/home',
+    redirect: '/about',
   }];
 
   useEffect(() => {

@@ -1,0 +1,124 @@
+@import '../../styles/base/mixinResponse';
+
+.about {
+    margin-top: 7rem;
+
+    .about-container {
+        @include desktop {
+            padding: 15px 20px 30px 20px;
+        }
+
+        @include tablet {
+            padding: 15px 5px 30px 5px;
+        }
+
+        @include mobile {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .conatiner-breadcrumb {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .about-intro {
+
+            @include desktop {
+                padding: 10px 30px;
+            }
+
+            @include tablet {
+                padding: 10px 20px;
+            }
+
+            @include mobile {
+                padding: 10px 10px;
+            }
+
+            .container-about {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 110px;
+                height: 500px;
+
+                @include mobile {
+                    flex-direction: column;
+                    height: auto;
+                    margin-bottom: 30px;
+                }
+
+                &.rever {
+                    flex-direction: row-reverse;
+
+                    @include mobile {
+                        flex-direction: column;
+                    }
+                }
+
+
+                .container-img-about {
+                    width: 48%;
+
+                    @include mobile {
+                        width: 100%;
+                    }
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .container-text-about {
+                    width: 48%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    margin: auto;
+
+                    @include mobile {
+                        width: 100%;
+                        padding-top: 30px;
+                    }
+
+                    h3 {
+                        font-size: 22px;
+                        font-weight: 400;
+                        font-family: Cinzel;
+                        line-height: 1;
+
+                        @include mobile {
+                            font-size: 17px;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                        font-family: Nunito Sans;
+                        font-weight: 400;
+                        color: #222222;
+                        @include desktop {
+                            font-size: 17px;
+                        }
+                    }
+
+                    span {
+                        font-size: 14px;
+                        font-family: Nunito Sans;
+                        font-weight: 700;
+                        color: #222222;
+                        @include desktop {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,9 +6,7 @@ import { Header } from "../components/header/Header";
 import { Home } from "../pages/home/Home";
 import { Details } from "../pages/details/Details";
 import { Collection } from "../pages/collection/Collection";
-// import { Breadcrumbs } from "../components/breadcrumb/Breadcrumb";
-// import { dataRutas } from './dataRutas';
-// import { NotFount } from "../components/pages/notFound/NotFound";
+import { About } from "../pages/about/About";
 export const AppRouter = () => {
   return (
     <BrowserRouter>
@@ -21,6 +19,7 @@ export const AppRouter = () => {
             <Route path="home" exact element={<Home />} />
             <Route path="all-collection" exact element={<Collection />} />
             <Route path="detail/:product" exact element={<Details />} />
+            <Route path="about" exact element={<About />} />
             **<Route path="*" element={<Home />}></Route>**
           </Routes>
         </div>

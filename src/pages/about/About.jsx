@@ -3,22 +3,19 @@ import React from 'react';
 import { Breadcrumb } from 'antd';
 import { AnimationPage } from '../../components/animation/AnimationPage';
 import azul1 from '../../assets/products/azzul/swiper/azzul_1.jpg'
+import { useNavigate } from 'react-router-dom';
 
 export const About = () => {
-    let breadcrumb = [
-        {
-            breadcrumbName: 'Inicio',
-        },
-        {
-            breadcrumbName: 'MAJO´S',
-        },
-    ];
+    let navigate = useNavigate();
     return (
         <AnimationPage>
             <div className='about'>
                 <div className='about-container'>
                     <div className='conatiner-breadcrumb'>
-                        <Breadcrumb separator=">" routes={breadcrumb} />
+                        <Breadcrumb separator=">" >
+                            <Breadcrumb.Item className='cursor-poiner' onClick={() => navigate('/home')}>Inicio</Breadcrumb.Item>
+                            <Breadcrumb.Item>MAJO´S</Breadcrumb.Item>
+                        </Breadcrumb>
                     </div>
                     <div className='about-intro'>
                         <div className='container-about'>

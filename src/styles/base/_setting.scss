@@ -15,6 +15,16 @@
   transition: all 0.4s ease;
 }
 
+.cursor-poiner {
+  transition: all 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: #b67d12 !important;
+    transition: all 0.3s ease;
+  }
+}
+
 body::-webkit-scrollbar {
   width: 9px;
 }

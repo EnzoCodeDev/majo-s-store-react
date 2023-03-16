@@ -30,14 +30,6 @@ export const Details = () => {
             setProductData(undefined);
         }
     }, [product]);
-    let breadcrumb = [
-        {
-            breadcrumbName: 'Inicio',
-        },
-        {
-            breadcrumbName: 'Detalle de producto',
-        },
-    ];
 
     const itemsTab = [
         {
@@ -58,7 +50,10 @@ export const Details = () => {
                 <div className='details'>
                     <div className='container-detail'>
                         <div className='conatiner-breadcrumb'>
-                            <Breadcrumb separator=">" routes={breadcrumb} />
+                            <Breadcrumb separator=">" >
+                                <Breadcrumb.Item className='cursor-poiner' onClick={() => navigate('/home')}>Inicio</Breadcrumb.Item>
+                                <Breadcrumb.Item>Detalle de producto</Breadcrumb.Item>
+                            </Breadcrumb>
                         </div>
                         <div className='container-details-products'>
                             <div className='container-img'>

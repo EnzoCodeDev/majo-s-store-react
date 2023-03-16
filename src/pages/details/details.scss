@@ -211,3 +211,32 @@
         display: none;
     }
 }
+
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-tabs .ant-tabs-tab-btn {
+    &:hover {
+        color: #b67d12 !important;
+    }
+}
+
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #b67d12 !important;
+}
+
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-tabs .ant-tabs-ink-bar {
+    background: #b67d12 !important;
+}
+
+.tap-guies {
+
+    @include desktop {
+        padding: 30px 60px;
+    }
+
+    @include tablet {
+        padding: 30px 40px;
+    }
+
+    @include mobile {
+        padding: 5px 5px;
+    }
+}

@@ -1,0 +1,41 @@
+@import '../../styles/base/mixinResponse';
+
+.return-warranties-page {
+    margin-top: 7rem;
+
+    .return-warranties-page-container {
+        @include desktop {
+            padding: 15px 20px 30px 20px;
+        }
+
+        @include tablet {
+            padding: 15px 5px 30px 5px;
+        }
+
+        @include mobile {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .conatiner-breadcrumb {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .return-warranties-page-info {
+
+            @include desktop {
+                padding: 10px 30px;
+            }
+
+            @include tablet {
+                padding: 10px 20px;
+            }
+
+            @include mobile {
+                padding: 10px 5px;
+            }
+        }
+    }
+}

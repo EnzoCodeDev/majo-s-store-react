@@ -1,6 +1,6 @@
 import './details.scss';
 import React, { useState, useEffect } from 'react';
-import { Breadcrumb, Image, Badge, Button, Result } from 'antd';
+import { Breadcrumb, Image, Badge, Button, Result, Tabs } from 'antd';
 import { WhatsAppOutlined } from "@ant-design/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,10 +8,11 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import { Navigation, EffectFade, Pagination, Autoplay } from "swiper";
-
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { AnimationPage } from '../../components/animation/AnimationPage';
 import { dataProducts } from '../../data/dataProducts';
+import { Size } from '../../components/size/Size';
+import { ReturnWarranties } from '../../components/returns-warranties/ReturnWarranties';
 export const Details = () => {
     let navigate = useNavigate();
     let { product } = useParams();
@@ -36,6 +37,19 @@ export const Details = () => {
         {
             breadcrumbName: 'Detalle de producto',
         },
+    ];
+
+    const itemsTab = [
+        {
+            key: '1',
+            label: `GUÍA DE TALLAS`,
+            children: <Size />,
+        },
+        {
+            key: '2',
+            label: `ENVÍOS Y DEVOLUCIONES`,
+            children: <ReturnWarranties />,
+        }
     ];
 
     return (
@@ -152,6 +166,9 @@ export const Details = () => {
                                     </Link>
                                 </div>
                             </div>
+                        </div>
+                        <div className='tap-guies'>
+                            <Tabs centered={true} tabPosition={'top'} defaultActiveKey="1" items={itemsTab} />
                         </div>
                     </div>
                 </div>

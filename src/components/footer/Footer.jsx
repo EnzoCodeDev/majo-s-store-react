@@ -3,42 +3,42 @@ import moment from "moment";
 import { MdWhatsapp, MdFacebook } from "react-icons/md";
 import { TbBrandTiktok, TbBrandInstagram } from "react-icons/tb";
 import "./footer.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 let footerInfo = [{
   title: 'INFORMACIÓN',
   content: [{
     text: 'Circular 73A #38-73, Medellín, Colombia.',
-    redirect: null,
+    redirect: false,
     openWindow: false,
   }, {
     text: '63625752763',
-    redirect: null,
+    redirect: false,
     openWindow: false,
   }, {
     text: 'Lunes - Viernes 8 a.m. - 6 p.m.',
-    redirect: null,
+    redirect: false,
     openWindow: false,
   }]
 }, {
   title: 'SOBRE NOSOTROS',
   content: [{
     text: 'SERGIO CANO',
-    redirect: null,
+    redirect: false,
     openWindow: false,
   }, {
     text: "MAJO´S",
-    redirect: null,
+    redirect: false,
     openWindow: false,
   }],
 }, {
   title: 'MAS SERVICIOS',
   content: [{
     text: 'Guía de tallas',
-    redirect: null,
+    redirect: '/size-guides',
     openWindow: false,
   }, {
     text: 'Devoluciones y garantías',
-    redirect: null,
+    redirect: 'return-warranties',
     openWindow: false,
   }],
 }];
@@ -59,15 +59,22 @@ let socials = [{
 }];
 
 export const Footer = () => {
+  let navigate = useNavigate();
   return (
     <footer className="container-main-footer">
       <div className="container-footer">
         {footerInfo.map((item, index) => (
           <div key={index} className="cotainer-setion-footer">
             <span>{item['title']}</span>
-            <ul className='container-list'>
+            <ul className={'container-list'}>
               {item['content'].map((itemContent, i) => (
-                <li key={i} >
+                <li key={i} className={itemContent['redirect'] ? 'rediret' : ''}
+                  onClick={() => {
+                    if (itemContent['redirect']) {
+                      navigate(itemContent['redirect']);
+                    }
+                  }}
+                >
                   {itemContent['text']}
                 </li>
               ))}

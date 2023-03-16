@@ -1,0 +1,27 @@
+@import '../../styles/base/mixinResponse';
+
+.container-return-warranties {
+    .return-warranties {
+        h3 {
+            font-size: 22px;
+            font-weight: 400;
+            font-family: Cinzel;
+            line-height: 1;
+    
+            @include mobile {
+                font-size: 17px;
+            }
+        }
+    
+        p {
+            font-size: 14px;
+            font-family: Nunito Sans;
+            font-weight: 400;
+            color: #222222;
+    
+            @include desktop {
+                font-size: 17px;
+            }
+        }
+    }
+}

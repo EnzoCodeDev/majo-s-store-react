@@ -3,16 +3,21 @@ import './allCollection.scss';
 import { Card, Badge } from 'antd';
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
+import Scroll from 'react-scroll';
 import { dataProducts } from '../../data/dataProducts';
 
 export const AllCollection = () => {
     let navigate = useNavigate();
+    let scroll = Scroll.animateScroll;
     const { Meta } = Card;
     let dataAllCollection = dataProducts['allCollection'];
     return (
         <div className='container-all-component'>
             {dataAllCollection.map((item, index) => (
-                <div key={index} className='container-card' onClick={() => navigate(`/detail/${item['redirect']}`)}>
+                <div key={index} className='container-card' onClick={() => {
+                    navigate(`/detail/${item['redirect']}`);
+                    scroll.scrollToTop();
+                }}>
                     <Badge.Ribbon
                         style={{
                             visibility: dataProducts['ultime'] === item['redirect'] ? 'visible' : (dataProducts['unavailable'].includes(item['redirect']) ? 'visible' : 'hidden')

@@ -9,34 +9,16 @@ export let dataProducts = {
     unavailable: ['alfa'],
     allCollection: [
         {
-            title: 'ALFA',
-            price: '230.000',
-            img: zusu,
-            redirect: 'azzul',
-        },
-        {
             title: 'AZZUL',
             price: '230.000',
             img: zusu,
-            redirect: 'alfa',
+            redirect: 'azzul',
         },
         {
             title: 'ALFA',
             price: '230.000',
             img: zusu,
-            redirect: 'azzul',
-        },
-        {
-            title: 'AZZUL',
-            price: '230.000',
-            img: zusu,
             redirect: 'alfa',
-        },
-        {
-            title: 'ALFA',
-            price: '230.000',
-            img: zusu,
-            redirect: 'azzul',
         },
     ],
     alfa: {
@@ -60,7 +42,7 @@ export let dataProducts = {
                 t8: '- El empaque y la etiqueta son hechos de papel reciclado.',
                 t9: '- El empaque y la etiqueta son hechos de papel reciclado.',
             },
-            tallas: ['S', 'M', 'L'],
+            tallas: ['XS', 'S', 'L'],
         }
     },
     azzul: {
@@ -71,7 +53,7 @@ export let dataProducts = {
         },
         detail: {
             title: 'Azzul',
-            price: '230.000',
+            price: '10.000',
             img: [azul1, azul2, azul3, azul4],
             description: {
                 t1: 'PORTO se inspiro en la ciudad del vino en Portugal, la ciudad de las casitas, de los mil colores y barcos.',
@@ -84,7 +66,7 @@ export let dataProducts = {
                 t8: '- El empaque y la etiqueta son hechos de papel reciclado.',
                 t9: '- El empaque y la etiqueta son hechos de papel reciclado.',
             },
-            tallas: ['S', 'M', 'L'],
+            tallas: ['XS', 'S', 'L'],
         }
     }
 };

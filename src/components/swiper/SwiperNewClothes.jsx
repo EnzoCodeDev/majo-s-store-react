@@ -10,8 +10,9 @@ import "swiper/css/pagination";
 
 import { Navigation, EffectFade, Pagination, Autoplay } from "swiper";
 import { Button } from 'antd';
-import { dataProducts } from '../../data/dataProducts';
+import Scroll from 'react-scroll';
 import { useNavigate } from 'react-router-dom';
+import { dataProducts } from '../../data/dataProducts';
 
 export const SwiperNewClothes = () => {
     let navigate = useNavigate();
@@ -40,7 +41,11 @@ export const SwiperNewClothes = () => {
                                     <div className="container-text">
                                         <p className='container-text__1' >NUEVO PRODUCTO</p>
                                         <p className='container-text__2' >{productActual['title']} </p>
-                                        <Button onClick={() => navigate(`/detail/${productActual['redirect']}`)} className='buttom' size="large" type="primary">Disponible ya!</Button>
+                                        <Button onClick={() => {
+                                            let scroll = Scroll.animateScroll;
+                                            navigate(`/detail/${productActual['redirect']}`);
+                                            scroll.scrollToTop();
+                                        }} className='buttom' size="large" type="primary">Disponible ya!</Button>
                                     </div>
                                 </div>
                             </div>

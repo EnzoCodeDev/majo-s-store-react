@@ -3,11 +3,13 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { MdWhatsapp, MdFacebook } from "react-icons/md";
 import { TbBrandTiktok, TbBrandInstagram } from "react-icons/tb";
+import Scroll from 'react-scroll';
 import { dataProducts } from "../../data/dataProducts";
 import logo from '../../assets/majos/logo.png'
 
 export const Header = () => {
   let location = useLocation();
+  let scroll = Scroll.animateScroll;
   let ultime = dataProducts['ultime'];
   let navigate = useNavigate();
   const [bg, setBg] = useState(false);
@@ -61,7 +63,10 @@ export const Header = () => {
 
         </div>
         <div className="container-enter">
-          <img onClick={() => navigate('/home')} className="logo" src={logo} alt="Logo" />
+          <img onClick={() => {
+            navigate('/home');
+            scroll.scrollToTop();
+          }} className="logo" src={logo} alt="Logo" />
         </div>
         <div className="container-end">
           {socials.map((item, index) => (
@@ -86,7 +91,10 @@ export const Header = () => {
                     {item['name']}
                   </li>
                 ) : (
-                  <li className="selected" onClick={() => navigate(item['redirect'])}>
+                  <li className="selected" onClick={() => {
+                    navigate(item['redirect']);
+                    scroll.scrollToTop();
+                  }}>
                     {item['name']}
                   </li>
                 )}

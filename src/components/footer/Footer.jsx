@@ -2,6 +2,7 @@ import React from "react";
 import moment from "moment";
 import { MdWhatsapp, MdFacebook } from "react-icons/md";
 import { TbBrandTiktok, TbBrandInstagram } from "react-icons/tb";
+import Scroll from 'react-scroll';
 import "./footer.scss";
 import { Link, useNavigate } from "react-router-dom";
 let footerInfo = [{
@@ -27,7 +28,7 @@ let footerInfo = [{
     openWindow: false,
   }, {
     text: "MAJO´S",
-    redirect: false,
+    redirect: '/about',
     openWindow: false,
   }],
 }, {
@@ -60,6 +61,7 @@ let socials = [{
 
 export const Footer = () => {
   let navigate = useNavigate();
+  let scroll = Scroll.animateScroll;
   return (
     <footer className="container-main-footer">
       <div className="container-footer">
@@ -71,6 +73,7 @@ export const Footer = () => {
                 <li key={i} className={itemContent['redirect'] ? 'rediret' : ''}
                   onClick={() => {
                     if (itemContent['redirect']) {
+                      scroll.scrollToTop();
                       navigate(itemContent['redirect']);
                     }
                   }}

@@ -101,36 +101,40 @@
             .selected {
                 font-family: Cinzel;
                 font-size: 17px;
+
                 @include desktop {
                     font-size: 17px;
                     padding: 0px 25px;
                 }
-            
+
                 @include tablet {
                     font-size: 17px;
                     padding: 0px 25px;
                 }
-            
+
                 @include mobile {
                     font-size: 15px;
                     padding: 0px 10px;
                 }
+
                 transition: all 0.5s ease;
 
                 &:hover {
                     cursor: pointer;
                     transition: all 0.5s ease;
+
                     @include desktop {
                         font-size: 17.5px;
                     }
-                
+
                     @include tablet {
                         font-size: 17.5px;
                     }
-                
+
                     @include mobile {
                         font-size: 15.5px;
                     }
+
                     font-size: 18px;
                     color: #b67d12;
                 }
@@ -140,16 +144,17 @@
                 font-family: Cinzel;
                 font-size: 17px;
                 color: #b67d12;
+
                 @include desktop {
                     font-size: 17px;
                     padding: 0px 25px;
                 }
-            
+
                 @include tablet {
                     font-size: 17px;
                     padding: 0px 25px;
                 }
-            
+
                 @include mobile {
                     font-size: 15px;
                     padding: 0px 10px;

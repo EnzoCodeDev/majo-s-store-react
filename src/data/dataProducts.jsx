@@ -59,7 +59,7 @@ export let dataProducts = {
                 t4: '• Este conjunto está hecho con fibra de cáscara de piña.',
                 t5: '• Falda ajustable a un lado con cierre.',
                 t6: '• Es edición limitada.',
-                t7: '• Envíos gratis a todo el país 🇨🇴',
+                t7: '• Envíos gratis a todo el país \uD83C\uDDE8\uD83C\uDDF4',
             },
             tallas: ['XS', 'S', 'M'],
         }
@@ -76,7 +76,7 @@ export let dataProducts = {
                 t4: '• Este top está hecho con poliéster reciclado.',
                 t5: '• El empaque es hecho con materiales reciclados.',
                 t6: '• Es edición limitada.',
-                t7: '• Envíos gratis a todo el país 🇨🇴',
+                t7: '• Envíos gratis a todo el país \uD83C\uDDE8\uD83C\uDDF4',
             },
             tallas: ['XS', 'S', 'M'],
         }
@@ -93,7 +93,7 @@ export let dataProducts = {
                 t4: '• Este top está hecho de manera sostenible.',
                 t5: '• El empaque es hecho con materiales reciclados.',
                 t6: '• Esta edición es limitada.',
-                t7: '• Envíos gratis a todo el país 🇨🇴',
+                t7: '• Envíos gratis a todo el país \uD83C\uDDE8\uD83C\uDDF4',
             },
             tallas: ['XS', 'S', 'M'],
         }

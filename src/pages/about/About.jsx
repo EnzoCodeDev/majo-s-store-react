@@ -1,9 +1,9 @@
 import './about.scss';
 import React from 'react';
 import { Breadcrumb } from 'antd';
-import { AnimationPage } from '../../components/animation/AnimationPage';
-import azul1 from '../../assets/products/azzul/swiper/azzul_1.jpg'
 import { useNavigate } from 'react-router-dom';
+import { AnimationPage } from '../../components/animation/AnimationPage';
+import azul1 from '../../assets/products/azzul/present/azzul_1.jpg';
 
 export const About = () => {
     let navigate = useNavigate();

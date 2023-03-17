@@ -69,18 +69,6 @@ export const Details = () => {
                                         )}
                                     </Badge.Ribbon>
                                 </div>
-                                <div className='img-selected responsive'>
-                                    <Badge.Ribbon
-                                        style={{
-                                            visibility: dataProducts['ultime'] === product ? 'visible' : (dataProducts['unavailable'].includes(product) ? 'visible' : 'hidden')
-                                        }}
-                                        text={dataProducts['unavailable'].includes(product) ? "Agotado" : 'Nuevo'}
-                                        color={dataProducts['unavailable'].includes(product) ? "#a39a8e" : 'green'}>
-                                        {productData['img'][imgSelect2] && (
-                                            <Image src={productData['img'][imgSelect2]} alt={'Cover_page'} />
-                                        )}
-                                    </Badge.Ribbon>
-                                </div>
                                 <div className='container-img-not-selected'>
                                     {productData['img'].map((item, index) => (
                                         <div key={index} className='img-not-selected'>
@@ -139,8 +127,6 @@ export const Details = () => {
                                     <p>{productData['description']['t5']}</p>
                                     <p>{productData['description']['t6']}</p>
                                     <p>{productData['description']['t7']}</p>
-                                    <p>{productData['description']['t8']}</p>
-                                    <p>{productData['description']['t9']}</p>
                                 </div>
                                 <div className='container-tallas'>
                                     <p>Tallas disponibles:</p>

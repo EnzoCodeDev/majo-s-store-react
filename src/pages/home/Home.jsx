@@ -2,7 +2,7 @@ import './home.scss';
 import React from 'react';
 import { AnimationPage } from '../../components/animation/AnimationPage';
 import { SwiperNewClothes } from '../../components/swiper/SwiperNewClothes';
-import zusu from '../../assets/products/azzul/swiper/zusu.jpg';
+import azul1 from '../../assets/products/azzul/present/azzul_1.jpg';
 import { AllCollection } from '../../components/all-collection/AllCollection';
 export const Home = () => {
     return (
@@ -13,7 +13,7 @@ export const Home = () => {
                 <div className='container-presentation'>
                     <div className='presentation'>
                         <div className='container-img'>
-                            <img src={zusu} alt="Cover_page" />
+                            <img src={azul1} alt="Cover_page" />
                         </div>
                         <div className='container-description'>
                             <h2>BIENVENIDO</h2>

@@ -16,7 +16,8 @@ import azul8 from '../assets/products/azzul/present/azzul_8.jpg';
 import alfa1 from '../assets/products/alfa/present/alfa_1.jpg';
 import alfa2 from '../assets/products/alfa/present/alfa_2.jpg';
 import alfa3 from '../assets/products/alfa/present/alfa_3.jpg';
-import alfa4 from '../assets/products/alfa/present/alfa_4.jpg';
+import alfa5 from '../assets/products/alfa/present/alfa_5.jpg';
+import alfa6 from '../assets/products/alfa/present/alfa_6.jpg';
 
 
 export let dataProducts = {
@@ -51,7 +52,7 @@ export let dataProducts = {
         detail: {
             title: 'Conjunto PINE',
             price: '150.000',
-            img: [pine3, pine1, pine2, pine4, pine5],
+            img: [pine1, pine3, pine4, pine5],
             description: {
                 t1: 'Empoderate con el conjunto PINE🍍',
                 t2: 'PINE está inspirado por esos colores que queremos preservar💚',
@@ -68,7 +69,7 @@ export let dataProducts = {
         detail: {
             title: 'Crop Top AZZUL',
             price: '97.000',
-            img: [azul2, azul3, azul4, azul5, azul6, azul7, azul8, azul1],
+            img: [azul1, azul2, azul7, azul8, azul5, azul6, azul3, azul4],
             description: {
                 t1: 'Empoderate con el Crop Top AZZUL💙',
                 t2: 'AZZUL está inspirado por esos colores que queremos preservar.',
@@ -85,7 +86,7 @@ export let dataProducts = {
         detail: {
             title: 'Crop Top ALFA',
             price: '140.000',
-            img: [alfa1, alfa2, alfa3, alfa4],
+            img: [alfa2, alfa5, alfa3, alfa6],
             description: {
                 t1: 'Siéntete  segura con el crop top ALFA💛.',
                 t2: 'ALFA está inspirado en lo mágico, elegante y exclusivo del municipio Roldanillo, características que comparte con el top del mes enero.',

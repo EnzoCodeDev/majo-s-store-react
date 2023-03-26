@@ -8,15 +8,15 @@ import { Link, useNavigate } from "react-router-dom";
 let footerInfo = [{
   title: 'INFORMACIÓN',
   content: [{
-    text: 'Circular 73A #38-73, Medellín, Colombia.',
+    text: 'Roldanillo, Valle del Cauca',
     redirect: false,
     openWindow: false,
   }, {
-    text: '63625752763',
+    text: '318 - 684 - 9298',
     redirect: false,
     openWindow: false,
   }, {
-    text: 'Lunes - Viernes 8 a.m. - 6 p.m.',
+    text: 'Lunes a viernes  8 a.m. - 6 p.m.',
     redirect: false,
     openWindow: false,
   }]
@@ -27,7 +27,7 @@ let footerInfo = [{
     redirect: false,
     openWindow: false,
   }, {
-    text: "MAJO´S",
+    text: "MAJO'S",
     redirect: '/about',
     openWindow: false,
   }],

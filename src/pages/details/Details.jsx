@@ -143,7 +143,7 @@ export const Details = () => {
                                             window.open("https://wa.me/message/VRYESG22ZYGPB1")
                                         }}
                                     >
-                                        <Button icon={<WhatsAppOutlined />} className='whatsapp' type="primary"> WhatsApp </Button>
+                                        <Button icon={<WhatsAppOutlined />} className='whatsapp' type="primary"> Comprar </Button>
                                     </Link>
                                 </div>
                             </div>

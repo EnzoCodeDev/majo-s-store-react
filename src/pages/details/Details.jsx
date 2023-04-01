@@ -39,7 +39,7 @@ export const Details = () => {
         },
         {
             key: '2',
-            label: `ENVÍOS Y DEVOLUCIONES`,
+            label: `DEVOLUCIONES Y GARATÍAS`,
             children: <ReturnWarranties />,
         }
     ];

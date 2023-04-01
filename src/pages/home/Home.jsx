@@ -2,7 +2,7 @@ import './home.scss';
 import React from 'react';
 import { AnimationPage } from '../../components/animation/AnimationPage';
 import { SwiperNewClothes } from '../../components/swiper/SwiperNewClothes';
-import azul1 from '../../assets/products/azzul/present/azzul_1.jpg';
+import welcome from '../../assets/majos/welcome.jpg';
 import { AllCollection } from '../../components/all-collection/AllCollection';
 export const Home = () => {
     return (
@@ -13,12 +13,12 @@ export const Home = () => {
                 <div className='container-presentation'>
                     <div className='presentation'>
                         <div className='container-img'>
-                            <img src={azul1} alt="Cover_page" />
+                            <img src={welcome} alt="Cover_page" />
                         </div>
                         <div className='container-description'>
                             <h2>BIENVENIDO</h2>
-                            <p>En Andrea Forster creemos en la Moda Sostenible y el Slow Fashion.</p>
-                            <p>Nuestros tops son limitados, cada top tiene su propia personalidad y nombre, pero todos comparten un factor común… El combinar las raíces latinas con el estilo europeo. Muy pocas unidades por diseño y un solo diseño por mes.</p>
+                            <p>En MAJO`S creemos que la moda no tiene porqué dañar nuestro planeta, somos conscientes y parcialmente sostenibles.</p>
+                            <p>Se produce una colección de una sola prenda al mes, la cual tiene una producción limitada. Las telas, en su mayoría, son con tejidos reciclados o fibras naturales. La estampación y color se obtiene por sublimación, no se utiliza agua en el proceso.</p>
                             <p>Conócenos mejor</p>
                         </div>
                     </div>

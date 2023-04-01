@@ -41,7 +41,7 @@
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 110px;
-                height: 500px;
+                height: 400px;
 
                 @include mobile {
                     flex-direction: column;
@@ -76,11 +76,12 @@
 
                 .container-text-about {
                     width: 48%;
-                    height: 100%;
+                    height: 70%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
                     margin: auto;
+                    margin-top: 0;
 
                     @include mobile {
                         width: 100%;

@@ -1,5 +1,4 @@
 import pine1 from '../assets/products/pine/present/pine_1.jpg';
-import pine2 from '../assets/products/pine/present/pine_2.jpg';
 import pine3 from '../assets/products/pine/present/pine_3.jpg';
 import pine4 from '../assets/products/pine/present/pine_4.jpg';
 import pine5 from '../assets/products/pine/present/pine_5.jpg';
@@ -19,11 +18,24 @@ import alfa3 from '../assets/products/alfa/present/alfa_3.jpg';
 import alfa5 from '../assets/products/alfa/present/alfa_5.jpg';
 import alfa6 from '../assets/products/alfa/present/alfa_6.jpg';
 
+import clara_banner_1 from '../assets/products/clara/clara_banner_1.jpg';
+import clara_banner_2 from '../assets/products/clara/clara_banner_2.jpg';
+import clara_present from '../assets/products/clara/clara_present.jpg';
+import clara1 from '../assets/products/clara/clara_1.jpg';
+import clara2 from '../assets/products/clara/clara_2.jpg';
+import clara3 from '../assets/products/clara/clara_3.jpg';
+import clara4 from '../assets/products/clara/clara_4.jpg';
 
 export let dataProducts = {
-    ultime: 'pine',
+    ultime: 'camClara',
     unavailable: [],
     allCollection: [
+        {
+            title: 'Camisa CLARA',
+            price: '168.000',
+            img: clara_present,
+            redirect: 'camClara',
+        },
         {
             title: 'Conjunto PINE',
             price: '150.000',
@@ -43,12 +55,29 @@ export let dataProducts = {
             redirect: 'alfa',
         },
     ],
-    pine: {
+    camClara: {
         swiper: {
-            title: 'Conjunto PINE',
-            redirect: 'pine',
-            img: [pine2, pine2],
+            title: 'Camisa CLARA',
+            redirect: 'camClara',
+            img: [clara_banner_1, clara_banner_2],
         },
+        detail: {
+            title: 'Camisa CLARA',
+            price: '168.000',
+            img: [clara1, clara2, clara3, clara4],
+            description: {
+                t1: 'Clara está inspirada en los paisajes de neblina, donde todo está perfectamente puesto, elegante y exclusivo.',
+                t2: '• Esta camisa esta hecha con lino ecológico',
+                t3: '• Cuenta con botones ajustables en las mangas',
+                t4: '• Cuenta con hombreras que resaltan la figura',
+                t5: '• Es edición limitada.',
+                t6: '• Envíos gratis a todo el país \uD83C\uDDE8\uD83C\uDDF4',
+                t7: '',
+            },
+            tallas: ['XS', 'S', 'M'],
+        }
+    },
+    pine: {
         detail: {
             title: 'Conjunto PINE',
             price: '150.000',

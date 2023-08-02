@@ -9,19 +9,17 @@ import es_ES from "antd/lib/locale/es_ES";
 import moment from "moment";
 import "moment/locale/es";
 import { App } from './App';
-import reportWebVitals from './reportWebVitals';
 import { configureAppStore } from "./redux/store";
 import { resources } from "./translations/global";
 
 const store = configureAppStore();
-const root = ReactDOM.createRoot(document.getElementById('root'));
 
 i18next.use(LanguageDetector).init({
   resources,
 });
 
 moment.locale("es");
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <I18nextProvider i18n={i18next}>
@@ -30,8 +28,8 @@ root.render(
         </ConfigProvider>
       </I18nextProvider>
     </Provider>
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
